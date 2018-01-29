@@ -8,7 +8,6 @@ class Course extends EmberObject {
   // // title:
   // description: ''
   constructor() {
-    console.log('... constructor .... ');
     super();
     if (!this.title) { this.title = 'No Title'; }
     if (!this.description) { this.description = ''; }
@@ -18,7 +17,6 @@ class Course extends EmberObject {
 
   init() {
     this._super(...arguments);
-    console.log('... init .... ');
   }
 
   static languageName(abbrev) {

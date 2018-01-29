@@ -1,5 +1,26 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1>Hello Ember</h1>
+
+{{!-- {{dasherize 'Hello LinkedIn Engineers' delim='_'}} --}}
+
+{{!-- <div>
+  <p>{{placeholder-url w=300 h=302}}</p>
+  <img src="{{placeholder-url w=300 h=302}}" alt=""/>
+</div> --}}
+
+{{!-- <form action="">
+  {{x-input value=x label="Name"}}
+  {{x-input type="email" label="Email"}}
+  {{#x-input type="number" label="Age" as |v|}}
+    <h5>This is required {{v}}</h5>
+    <button >Button</button>
+  {{/x-input}}
+</form>
+x = {{x}} --}}
+
+<ul>
+  {{#each courses as |course| }}
+    <li>{{course.title}}</li>
+  {{/each}}
+</ul>
 
 {{outlet}}
