@@ -3,7 +3,7 @@
 {{!-- {{placeholder-url w=300 h=302}} --}}
 {{!-- <img src={{placeholder-url w=300 h=302}} alt="" /> --}}
 
-<form action="">
+{{!-- <form action="">
   {{x-input value=x label="Name"}}
   {{x-input     type="email" value="mnorth@linkedin.com" label="Email"}}
   {{#x-input     type="number" label="Age" as |api|}}
@@ -12,11 +12,10 @@
   {{/x-input}}
 </form>
 x = {{x}}
-{{outlet}}
+{{outlet}} --}}
 
 <ul>
   {{#each courses as |course|}}
-    <li>{{course.title}}</li>
-    {{!-- {{course-list-item model=course }} --}}
+    {{course-list-item model=course }}
   {{/each}}
 </ul>
