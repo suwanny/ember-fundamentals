@@ -1,10 +1,12 @@
 <h1>My List</h1>
 <ul>
-  {{#each model as |x|}}
-    <!-- /item/1   text: name -->
+  {{#each model as |course|}}
     <li>
-      {{link-to x.name 'list.item' x.id}}
+      {{#link-to "course" course.id}}
+        {{course.title}}
+      {{/link-to}}
     </li>
+    {{!-- {{course-list-item model=course }} --}}
   {{/each}}
 </ul>
 
