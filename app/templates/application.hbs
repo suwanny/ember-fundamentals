@@ -2,7 +2,10 @@
 
 {{!-- {{placeholder-url w=300 h=302}} --}} {{!--
 <img src={{placeholder-url w=300 h=302}} alt="" /> --}}
-
+<div id="computedDemo">
+  <h6>Computed Value Demo..</h6>
+  {{input value=lValue label="lower case" class="lowercase-field"}} {{input value=uValue label="upper case" class="uppercase-field"}}
+</div>
 <form action="">
   {{x-input value=x label="Name"}} {{x-input type="email" value="mnorth@linkedin.com" label="Email"}} {{#x-input type="number"
   label="Age" as |api|}}
