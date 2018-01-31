@@ -2,8 +2,14 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   model(params) {
-    let { id: title } = params;
-    return this.modelFor('application')
-      .filter(course => course.title === title)[0];
+    let { id: slug } = params;
+    const courses = this.modelFor('application').data.map(course => {
+      return course.attributes;
+    });
+    // debugger;
+    return courses.filter(course => course.slug === slug)[0];
+    // return this.modelFor('application').filter(
+    //   course => course.title === title
+    // )[0];
   }
 });

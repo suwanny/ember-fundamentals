@@ -39,8 +39,13 @@ const ALL_COURSES = [
   }
 ];
 
+const url = 'https://api.mike.works/api/v1/courses';
+
 export default Route.extend({
   model() {
-    return ALL_COURSES;
+    return fetch(url).then(function(response) {
+      return response.json();
+    });
+    // return ALL_COURSES;
   }
 });
